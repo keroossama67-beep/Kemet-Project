@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة في كيميت - العرض التقديمي</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        body {
+            background-color: #050505;
+            color: white;
+            overflow-x: hidden;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 5%;
+            z-index: 1000;
+        }
+
+        .home-btn {
+            background: rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+            color: #d4af37;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .home-btn:hover {
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        
+        .slide {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 10%;
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1.8s cubic-bezier(0.2, 0.8, 0.2, 1); /* تأثير سلو موشن ناعم جداً */
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            max-width: 750px;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            filter: brightness(0.35);
+        }
+
+        h1, h2 { color: #d4af37; margin-bottom: 20px; font-size: 2.8rem; }
+        p { font-size: 1.3rem; line-height: 1.8; color: #f0f0f0; }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            color: #d4af37;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-container">
+        <a href="kemet.html" class="home-btn">الرئيسية (Home)</a>
+    </div>
+
+    <section class="slide" id="welcome">
+        <img src="C:\Users\Administrator\Desktop\kemet\Journey-to-the-Pyramids.jpg" class="bg-img" alt="Welcome"> <div class="content-card">
+            <h1>أسرار الحضارة المصرية</h1>
+            <p>مرحباً بك في رحلة عبر الزمن. هنا نكشف لك عن أسرار الأهرامات الشامخة وعظمة الفراعنة. تجول معنا واستمتع بتجربة بصرية فريدة تعكس جمال "كيميت".</p>
+        </div>
+        <div class="scroll-hint">اسحب للأسفل لبدء الجولة ↓</div>
+    </section>
+
+    <section class="slide">
+        <img src="C:\Users\Administrator\Desktop\kemet\هرم-خوفو.jpg" class="bg-img" alt="Khufu">
+        <div class="content-card">
+            <h2>هرم خوفو (الأكبر)</h2>
+            <p>أعظم بناء هندسي في العالم القديم. يتكون من أكثر من 2 مليون قطعة حجرية، صُمم بدقة فلكية تجعل الشمس تتعامد على ممرات معينة فيه في أوقات محددة من السنة.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <img src="C:\Users\Administrator\Desktop\kemet\pngtree-an-image-of-the-great-pyramid-of-egypt-image_2692047.jpg" class="bg-img" alt="Khafre">
+        <div class="content-card">
+            <h2>هرم خفرع</h2>
+            <p>ثاني أهرامات الجيزة، ويشتهر بكونه الهرم الوحيد الذي مازال يحتفظ بقمته الأصلية المكسوة بالحجر الجيري الناعم، مما يعطينا لمحة عن الشكل البراق للأهرامات قديماً.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <img src="C:\Users\Administrator\Desktop\kemet\11111.jpg" class="bg-img" alt="Menkaure">
+        <div class="content-card">
+            <h2>هرم منقرع (الأصغر)</h2>
+            <p>رغم صغر حجمه مقارنة بجيرانه، إلا أنه يتميز بكسوة جرانيتية وردية رائعة. بجانبه تقع أهرامات الملكات الثلاثة، لتشكل لوحة متكاملة لعظمة الأسرة الرابعة.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <img src="C:\Users\Administrator\Desktop\kemet\sphinx-photo-of-a-and-pyramid-in-the-background_9600423.jpg" class="bg-img" alt="Sphinx">
+        <div class="content-card">
+            <h2>أبو الهول</h2>
+            <p>حارس الهضبة الأبدي. تمثال منحوت من صخرة واحدة بجسد أسد ورأس ملك، يرمز لاجتماع القوة مع الحكمة. يقف شامخاً ليحمي أسرار أجدادنا منذ آلاف السنين.</p>
+        </div>
+    </section>
+
+    <script>
+     
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.slide').forEach(slide => {
+            observer.observe(slide);
+        });
+
+        window.onload = () => {
+            document.getElementById('welcome').classList.add('active');
+        };
+    </script>
+</body>
+</html>

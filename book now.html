@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز رحلة كيميت - Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            margin: 0;
+            overflow: hidden; /* لمنع السكرول وجعلها كعرض تقديمي */
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+       
+        .bg-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.3);
+        }
+
+        
+        .booking-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: slowIn 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @keyframes slowIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 { color: #d4af37; margin-bottom: 25px; font-size: 2rem; }
+
+        .form-group {
+            text-align: right;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: slowIn 1s ease-out forwards;
+        }
+
+       
+        .form-group:nth-child(1) { animation-delay: 0.5s; }
+        .form-group:nth-child(2) { animation-delay: 0.8s; }
+        .form-group:nth-child(3) { animation-delay: 1.1s; }
+
+        label { display: block; margin-bottom: 8px; color: #d4af37; font-weight: bold; }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .submit-btn {
+            background: #d4af37;
+            color: black;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .home-link {
+            position: absolute;
+            top: 20px; right: 5%;
+            color: #d4af37;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #d4af37;
+            border-radius: 20px;
+            background: rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="kemet.html" class="home-link">الرئيسية (Home)</a>
+    
+    <img src="C:\Users\Administrator\Desktop\kemet\redcharlie-SqhU1nUnZL4-unsplash.jpg" class="bg-overlay"> <div class="booking-card">
+        <h1>حجز رحلة جديدة</h1>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label>الاسم بالكامل</label>
+                <input type="text" id="userName" placeholder="اكتب اسمك هنا" required>
+            </div>
+            <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="userEmail" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label>تاريخ الرحلة</label>
+                <input type="date" id="bookingDate" required>
+            </div>
+            <button type="submit" class="submit-btn">تأكيد الحجز</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

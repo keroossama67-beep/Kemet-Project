@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المسافر - KEMET</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-fixed {
+            position: fixed;
+            top: 20px;
+            right: 5%;
+            z-index: 1000;
+        }
+
+        .home-btn {
+            background: rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+            color: #d4af37;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .info-slide {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            opacity: 0; /* البداية مخفية */
+            transform: translateY(30px);
+            animation: slideInFade 1.5s ease-out forwards;
+        }
+
+        .info-slide:nth-child(1) { animation-delay: 0.2s; }
+        .info-slide:nth-child(2) { animation-delay: 0.5s; }
+        .info-slide:nth-child(3) { animation-delay: 0.8s; }
+        .info-slide:nth-child(4) { animation-delay: 1.1s; }
+
+        @keyframes slideInFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 35px;
+            border-radius: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            max-width: 700px;
+            width: 85%;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            filter: brightness(0.35);
+        }
+
+        h2 { color: #d4af37; font-size: 2.2rem; margin-bottom: 20px; }
+        ul { list-style: none; padding: 0; text-align: right; }
+        li { font-size: 1.2rem; margin: 12px 0; color: #eee; border-right: 3px solid #d4af37; padding-right: 15px; }
+
+        .contact-input {
+            width: 100%; padding: 12px; margin: 8px 0;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px; color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-fixed">
+        <a href="kemet.html" class="home-btn">الرئيسية (Home)</a>
+    </div>
+
+    <section class="info-slide">
+        <img src="C:\Users\Administrator\Desktop\kemet\rawan-yasser-tOlA5AuxQa0-unsplash.jpg" class="bg-overlay">
+        <div class="glass-card">
+            <h2>أفضل وقت للزيارة</h2>
+            <ul>
+                <li>الشتاء (أكتوبر - أبريل): الأفضل للأهرامات والأقصر.</li>
+                <li>الصيف (يونيو - سبتمبر): الأفضل للمنتجعات الشاطئية.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="info-slide">
+        <img src="C:\Users\Administrator\Desktop\kemet\faqih-abdul-Dxzmkphj3W8-unsplash.jpg" class="glass-card">
+        <div class="glass-card">
+            <h2>الرحلات والمواصلات</h2>
+            <ul>
+                <li>استخدم مترو الأنفاق أو تطبيقات النقل الذكي لتوفير الوقت.</li>
+                <li>تذاكر الأماكن الأثرية متوفرة عند المداخل بأسعار متنوعة.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="info-slide">
+        <div class="glass-card">
+            <h2>تواصل معنا</h2>
+            <form id="contactForm">
+                <input type="text" class="contact-input" placeholder="الاسم" required>
+                <input type="email" class="contact-input" placeholder="البريد الإلكتروني" required>
+                <textarea rows="3" class="contact-input" placeholder="استفسارك..."></textarea>
+                <button type="submit" class="home-btn" style="width: 100%; margin-top: 10px; cursor: pointer;">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
